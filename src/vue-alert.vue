@@ -40,6 +40,7 @@ export default {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    background-color: darkcyan;
   }
 
   .title {
