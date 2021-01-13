@@ -1,0 +1,27 @@
+{
+  "name": "vuealert",
+  "version": "1.0.0",
+  "description": "Custom alert vue component",
+  "main": "dist/vue-alert.umd.js",
+  "module": "dist/vue-alert.esm.js",
+  "unpkg": "dist/vue-alert.min.js",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-alert.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-alert.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-alert.min.js"
+  },
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "browser": {
+    "./sfc": "src/vue-alert.vue"
+  },
+  "author": "Richard Roncales",
+  "license": "ISC"
+}
